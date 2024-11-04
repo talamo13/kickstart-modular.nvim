@@ -8,7 +8,10 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('i', 'jk', '<Esc>')
 
 -- Add relative lines numbers
-vim.wo.relativenumber = true
+-- vim.wo.relativenumber = true
+
+-- Enabling mouse mode (although this is lowkey kinda a sin)
+vim.opt.mouse = 'a'
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
@@ -24,6 +27,11 @@ require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
+
+-- Some additional keymaps and things I should probably keep track of
+require 'options'
+
+vim.g.have_nerd_font = true
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
