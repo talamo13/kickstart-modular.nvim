@@ -45,4 +45,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- The start of my own stuff
+-- Variables that are going to make life alot simpler
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
+
+-- nvim-tree
+-- <Leader> ee toggles the tree
+keymap('n', '<Leader>e', ':NvimTreeToggle<cr>', opts)
+
 -- vim: ts=2 sts=2 sw=2 et
